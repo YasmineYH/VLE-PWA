@@ -23,33 +23,46 @@ const routes = [
   {
     path: '/studentdashboard',
     name: 'studentdashboard',
-    component: () => import('../views/StudentDashboardView.vue')
+    component: () => import('../views/studentViews/StudentDashboardView.vue')
   },
   {
     path: '/studentclassroom',
     name: 'studentclassroom',
-    component: () => import('../views/StudentClassroomView.vue')
+    component: () => import('../views/studentViews/StudentClassroomView.vue')
   },
   {
-    path: '/studentlibrary',
-    name: 'studentlibrary',
-    component: () => import('../views/StudentLibraryView.vue')
+    path: '/studentlibrary/coursematerials',
+    name: 'studentlibraryCM',
+    component: () => import('../views/studentViews/StudentLibraryCMView.vue')
   },
   {
-    path: '/studentassignments',
-    name: 'studentassignments',
-    component: () => import('../views/StudentAssignmentsView.vue')
+    path: '/studentlibrary/recordedclasses',
+    name: 'studentlibraryRC',
+    component: () => import('../views/studentViews/StudentLibraryRCView.vue')
+  },
+  {
+    path: '/studentassignments/pendingsubmissions',
+    name: 'studentassignmentsPS',
+    component: () => import('../views/studentViews/StudentAssignmentsPSView.vue')
+  },
+  {
+    path: '/studentassignments/recentlysubmitted',
+    name: 'studentassignmentsRS',
+    component: () => import('../views/studentViews/StudentAssignmentsRSView.vue')
   },
   {
     path: '/studentnotifications',
     name: 'studentnotifications',
-    component: () => import('../views/StudentNotificationsView.vue')
+    component: () => import('../views/studentViews/StudentNotificationsView.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
+  scrollBehavior () {
+    return { top: 0 }
+  }
 })
 
 export default router

@@ -34,8 +34,8 @@
 <script>
 import MainNavigation from '@/components/MainNavigation.vue'
 import DashboardCard from '@/components/DashboardCard.vue'
-import { students } from '../assets/data/students'
-import { dashboardContent } from '../assets/data/dashboardContent'
+import { students } from '@/assets/data/students'
+import { dashboardContent } from '@/assets/data/dashboardContent'
 //import { useRoute } from 'vue-router'
 //import { ref, watch } from 'vue'
 

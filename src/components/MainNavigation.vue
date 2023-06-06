@@ -12,39 +12,39 @@
             <ul class="mid-ul">
                 <li>
                     <img src="@/assets/images/home.svg" alt="Home Icon">
-                    <router-link to="studentdashboard" class="p">Home</router-link>
+                    <router-link :to="{ name: 'studentdashboard'}" class="p">Home</router-link>
                 </li>
                 <li>
                     <img src="@/assets/images/class.svg" alt="Classroom Icon">
-                    <router-link to="studentclassroom" class="p">Classroom</router-link>
+                    <router-link :to="{ name: 'studentclassroom'}" class="p">Classroom</router-link>
                 </li>
                 <li>
                     <img src="@/assets/images/library.svg" alt="Library Icon">
-                    <router-link to="studentlibrary" class="p">Library</router-link>
+                    <router-link :to="{ name: 'studentlibraryCM'}" class="p">Library</router-link>
                 </li>
                 <li>
                     <img src="@/assets/images/assignments.svg" alt="Assignments Icon">
-                    <router-link to="studentassignments" class="p">Assignments</router-link>
+                    <router-link :to="{ name: 'studentassignmentsPS'}" class="p">Assignments</router-link>
                 </li>
                 <li>
                     <img src="@/assets/images/notifications.svg" alt="Notifications Icon">
-                    <router-link to="studentnotifications" class="p">Notifications</router-link>
+                    <router-link :to="{ name: 'studentnotifications'}" class="p">Notifications</router-link>
                 </li>
             </ul>
 
             <ul class="bottom-ul">
                 <li>
-                    <router-link to="studentdashboard">
+                    <router-link :to="{name: 'studentdashboard'}">
                         <img src="@/assets/images/settings.svg" alt="Settings Icon">
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="studentdashboard">
+                    <router-link :to="{name: 'studentdashboard'}">
                         <img src="@/assets/images/profile.svg" alt="Profile Icon">
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="chooseview">
+                    <router-link :to="{name: 'chooseview'}">
                         <img src="@/assets/images/logout.svg" alt="Logout Icon">
                     </router-link>
                 </li>
@@ -107,7 +107,7 @@ export default {
                 height: calc(100% - 4px);
                 border-radius: 50%;
                 box-shadow: inset 0px 8px 8px 3px rgba(0, 42, 80, 0.85);
-                background-image: url('../assets/data/profiles/SSamsia.png');
+                background-image: url('../assets/data/profiles/YYasmine.png');
                 background-size: cover;
             }
         }
@@ -118,18 +118,31 @@ export default {
     }
 
     .mid-ul {
-        margin: 100px auto 125px 25px;
+        margin: 90px auto 125px 25px;
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         list-style: none;
-        gap: 25px;
+        gap: 20px;
 
         li {
             display: flex;
             gap: 20px;
+            width: 100%;
             align-items: center;
+            transition: all .2s ease-in;
+
+            .p {
+                padding: 10px 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            &:hover {
+                gap: 30px;
+            }
 
             img {
                 width: 20px;
@@ -145,6 +158,14 @@ export default {
         margin: auto;
         width: 75%;
         list-style: none;
+
+        li {
+            transition: all .2s ease-in;
+
+            &:hover {
+                transform: scale(.9) translateY(-1px);
+            }
+        }
     }
 }
 </style>

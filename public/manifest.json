@@ -1,0 +1,20 @@
+{
+    "name": "Virtual Learning Environment PWA",
+    "short_name": "VLE_PWA",
+    "theme_color": "#FBB786",
+    "icons": [
+        {
+            "src": "./img/icons/android-chrome-192x192.png",
+            "sizes":"192x192",
+            "type":"image/png"
+        },
+        {
+            "src":"./img/icons/android-chrome-512x512.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "fullscreen",
+    "background_color": "#FBB786"
+}
