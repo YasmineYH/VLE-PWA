@@ -123,7 +123,7 @@ export default {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(180deg, #FBB786 0%, rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(180deg, #FBB786 0%, #FFF9F6 100%);
                 border-radius: 5px;
 
                 &::before {

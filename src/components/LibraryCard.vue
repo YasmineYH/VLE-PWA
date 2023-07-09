@@ -30,7 +30,7 @@ export default {
         width: calc(100% - 40px);
         margin: auto;
         padding-top: 30px;
-        background: linear-gradient(360deg, #FBB786 0%, rgba(255, 255, 255, 0.75) 100%);
+        background: linear-gradient(360deg, #FBB786 0%, #FFF9F6 100%);
         border-radius: 5px;
         transition: all .5s ease-in;
 
@@ -50,7 +50,7 @@ export default {
         width: 100%;
         height: 45px;
         border-radius: 5px;
-        background: linear-gradient(180deg, #FBB786 0%, rgba(255, 255, 255) 100%);
+        background: linear-gradient(180deg, #FBB786 0%, #FFF9F6 100%);
         transition: all .3s ease-out;
     }
 

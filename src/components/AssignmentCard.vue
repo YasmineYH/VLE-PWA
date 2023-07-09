@@ -37,7 +37,7 @@ export default {
         height: 100%;
         width: calc(100% - 40px);
         margin: 0 auto;
-        background: linear-gradient(360deg, #FBB786 0%, rgba(255, 255, 255, 0.75) 100%);
+        background: linear-gradient(360deg, #FBB786 0%, #FFF9F6 100%);
         border-radius: 5px;
         padding: 15px 10px 0 0;
         transition: all .5s ease-in;
@@ -71,7 +71,7 @@ export default {
         height: 45px;
         padding: 0 15px;
         border-radius: 5px;
-        background: linear-gradient(180deg, #FBB786 0%, rgba(255, 255, 255) 100%);
+        background: linear-gradient(180deg, #FBB786 0%, #FFF9F6 100%);
         transition: all .3s ease-out;
     }
 

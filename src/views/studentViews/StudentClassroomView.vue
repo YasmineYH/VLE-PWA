@@ -197,12 +197,12 @@ export default {
                     border-radius: 4px;
                     overflow-y: scroll;
                     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.03);
-                    scrollbar-color: #FBB786 #FFFFFF;
+                    scrollbar-color: #FBB786 #FFF9F6;
                     scrollbar-width: thin;
 
                     &::-webkit-scrollbar {
                         width: 3px;
-                        background: #FFFFFF;
+                        background: #FFF9F6;
                         border-radius: 5px;
                         display: none;
                     }

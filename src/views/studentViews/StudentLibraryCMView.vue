@@ -2,7 +2,7 @@
     <div class="account-screen">
       <MainNavigation level="student" :matricNo=studentData.matricNo :firstName=studentData.firstName :lastName=studentData.lastName :picture=studentData.picture />
       
-      <Modal :modalShowing="modalShowing" />
+      <Modal :modalView="modal" @closeModal="toggleModal()" />
   
       <div class="account-content">
           <h1 class="h1">Library</h1>
@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="cards">
-                        <LibraryCard icon="pdf.svg" text="introduction.pdf" v-on:click="toggleModal()" />
+                        <LibraryCard icon="pdf.svg" text="introduction.pdf" @click="modal = {isOpen: 'true', type: 'download', content: 'introduction.pdf'}" />
                         <LibraryCard icon="pdf.svg" text="introduction.pdf" />
                         <LibraryCard icon="pdf.svg" text="introduction.pdf" />
                     </div>
@@ -60,10 +60,14 @@ export default {
     },
     setup() {
         const studentData = students.beautiful
-        const modalShowing = ref(false)
-        const toggleModal = () => {
-            modalShowing.value = !modalShowing.value
-        }
+        const modal = ref({
+            isOpen: '',
+            type: '',
+            content: ''
+        })
+
+        const toggleModal = () => modal.value.isOpen = !modal.value.isOpen
+       
         const secNavLinks = [
         {
             title: 'Course Materials',
@@ -81,7 +85,7 @@ export default {
             students,
             studentData,
             secNavLinks,
-            modalShowing,
+            modal,
             toggleModal
         }
     }

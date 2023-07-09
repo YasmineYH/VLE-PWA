@@ -136,6 +136,11 @@ export default {
         transform: scaleX(1) translateY(0px);
       }
     }
+
+    &.inverted {
+      background: linear-gradient(180deg, rgba(251, 183, 134, 0) 0%, #FBB786 100%);
+      padding-bottom: 5px;
+    }
   }
 
 
@@ -145,7 +150,8 @@ export default {
     height: calc(99.9 * var(--vh));
 
     .account-main-content {
-        width: 100%;
+        width: calc(100% + 10px);
+        padding-right: 10px;
     }
   }
 
@@ -155,7 +161,6 @@ export default {
     gap: 50px;
     overflow-y: scroll;
     height: calc(100% - 110px);
-    padding-right: 10px;
     
     &::-webkit-scrollbar {
         width: 2px;
@@ -185,7 +190,7 @@ export default {
       .cards {
           display: flex;
           flex-wrap: wrap;
-          gap: 30px;
+          gap: 25px;
       }
     }
   }
